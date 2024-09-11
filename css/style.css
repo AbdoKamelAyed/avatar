@@ -1,0 +1,116 @@
+/* V.0.1 */
+:root {
+    --ff-quicksand:"Quicksand";
+}
+html {
+    font-family: var(--ff-quicksand);
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to right,#01022d, #000);
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center ; */
+}
+.container {
+    background-image: linear-gradient(to right, #01022de5 30%,  #00000088),
+    url("../imgs/bg.webp");
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+.container:hover {
+    background-image: linear-gradient(to right, #01022de5 30%, transparent),
+    url("../imgs/bg.webp");
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.logo {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-style:italic;
+    padding: 30px;
+    position: relative;
+}
+.logo::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 8px;
+    background-color: gold;
+    left: calc(50px - 30px );
+    top: 65%;
+    border-radius: 8px;
+}
+ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+li {
+    position: relative;
+}
+ul li::after {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    top: 20px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+ul li:hover::after {
+    width: 100%;
+}
+.content {
+    width: 70%;
+    color: #fff;
+    padding: 30px;
+    margin-top: 10px;
+    position: absolute;
+    top: 25%;
+}
+.content h2 {
+    text-transform: uppercase;
+    font-size: 100px;
+    font-style: italic;
+}
+.content p {
+    width: 50%;
+    line-height: 1.5;
+    font-style: italic;
+    letter-spacing: 3px;
+    padding: 20px 0;
+    text-wrap: wrap;
+}
+.content button {
+    font-size: 30px;
+    padding: 6px 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.content button:hover{
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
